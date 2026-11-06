@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/06 16:37:00 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/06 20:09:53 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(void *s, int c, size_t n)
 {
 	unsigned char	*mem;
 	void			*ptr;
-	int				i;
+	size_t				i;
 
 	i = 0;
 	mem = (unsigned char *)s;

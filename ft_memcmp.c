@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/10/30 18:40:17 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/06 20:09:53 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*mem1;
 	unsigned char	*mem2;
-	int				i;
+	size_t				i;
 
 	i = 0;
 	mem1 = (unsigned char *)s1;

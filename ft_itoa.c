@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/06 15:53:53 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/06 20:09:04 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,25 @@ static int	ft_dec_n(int n)
 	return (i);
 }
 
-int	ft_fill_str(char *ptr, int n)
+void	ft_fill_str(char *ptr, int n)
 {
-	int	temp;
-
 	if (n < 0)
 	{
-		ptr = '-';
+		*ptr = '-';
 		ptr++;
 	}
 	if (n > 9)
 		ft_fill_str(++ptr, n / 10);
-	ptr = (n % 10) + '0';
+	*ptr = (n % 10) + '0';
 }
 
 char	*ft_itoa(int n)
 {
 	char	*ptr;
-	int		temp;
 
 	ptr = malloc(ft_dec_n(n));
 	if (!ptr)
 		return (NULL);
 	ft_fill_str(ptr, n);
-	return (n);
+	return (ptr);
 }

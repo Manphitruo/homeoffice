@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:39:31 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/06 17:56:40 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/06 19:44:09 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,13 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
+
 
 
 #endif

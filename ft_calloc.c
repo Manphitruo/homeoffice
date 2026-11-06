@@ -6,11 +6,11 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/06 11:42:13 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/06 20:05:23 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+/* #include <stdlib.h>
 int	ft_strlen(int	c);
 
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -20,6 +20,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	while (s[i])
 		dest[i] = s[i++];
 	return ();
-}
+} */
 
 
