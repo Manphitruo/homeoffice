@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/10/30 18:36:20 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:37:00 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(void *s, int c, size_t n)
 	while (i < n)
 	{
 		ptr = &mem[i];
-		if (mem[i] == c)
+		if (mem[i] == (unsigned char)c)
 			return (ptr);
 		i++;
 	}

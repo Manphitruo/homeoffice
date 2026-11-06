@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/10/30 19:10:39 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/06 11:42:13 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,5 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		dest[i] = s[i++];
 	return ();
 }
+
+
