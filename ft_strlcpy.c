@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/10/30 13:04:13 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/07 02:17:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-int	ft_strlen(int	c);
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -23,7 +23,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	if (n < 0)
 		return (ft_strlen(src));
 	while (i < n && src[i])
-		dest[i] = src[i++];
+	{
+		dest[i] = src[i];
+		i++;
+	}
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }

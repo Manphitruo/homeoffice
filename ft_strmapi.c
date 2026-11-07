@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/06 16:03:22 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/07 02:18:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!ptr)
 		return (NULL);
 	while (s[i])
-		ptr[i] = f(i,s[i++]);
+	{
+		ptr[i] = f(i,s[i]);
+		i++;
+	}
 	return (ptr);
 }

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/10/30 19:07:20 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/07 02:13:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-int	ft_strlen(int	c);
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -20,9 +20,15 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 
 	i = 0;
-	len = ft_strlen(s);
+	len = ft_strlen(s) + 1;
 	dest = malloc(len);
+	if (!dest)
+		return (NULL);
 	while (s[i])
-		dest[i] = s[i++];
+	{
+		dest[i] = s[i];
+		i++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
