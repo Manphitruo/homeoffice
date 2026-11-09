@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/08 21:22:00 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/09 20:21:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ unsigned int	ft_lstsize(t_list *lst)
 	int	count;
 
 	count = 0;
-	while (lst->next != NULL)
+	while (lst != NULL)
 	{
 		lst = lst->next;
 		count++;
