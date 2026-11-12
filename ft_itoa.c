@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/06 20:09:04 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/12 22:34:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ static int	ft_dec_n(int n)
 	int		i;
 
 	i = 0;
+	if (n < 0)
+	{
+		n = -n;
+		i++;
+	}
 	while (n > 0)
 	{
 		n /= 10;
@@ -26,25 +31,28 @@ static int	ft_dec_n(int n)
 	return (i);
 }
 
-void	ft_fill_str(char *ptr, int n)
+static void	ft_fill_str(char *ptr, int n, int size)
 {
 	if (n < 0)
 	{
-		*ptr = '-';
-		ptr++;
+		ptr[0] = '-';
+		n = -n;
 	}
 	if (n > 9)
-		ft_fill_str(++ptr, n / 10);
-	*ptr = (n % 10) + '0';
+		ft_fill_str(ptr, n / 10, size - 1);
+	ptr[size] = (n % 10) + '0';
 }
 
 char	*ft_itoa(int n)
 {
 	char	*ptr;
+	int		size;
 
-	ptr = malloc(ft_dec_n(n));
+	size = ft_dec_n(n);
+	ptr = malloc(size + 1);
 	if (!ptr)
 		return (NULL);
-	ft_fill_str(ptr, n);
+	ft_fill_str(ptr, n, size - 1);
+	ptr[size] = '\0';
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/07 02:22:02 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/11 22:29:43 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	int			j;
 
 	i = 0;
+	j = 0;
 	if (!little)
 		return ((char *)big);
 	while (i < len && big[i])

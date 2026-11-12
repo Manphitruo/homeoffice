@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/07 02:18:21 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/12 22:39:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = 0;
-	ptr = malloc(ft_strlen(s));
+	ptr = malloc(ft_strlen(s) + 1);
 	if (!ptr)
 		return (NULL);
 	while (s[i])
@@ -27,5 +27,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		ptr[i] = f(i,s[i]);
 		i++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }
