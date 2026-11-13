@@ -6,22 +6,29 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/06 20:05:23 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/13 18:33:51 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-void	*ft_memset(void *s, int c, size_t n);
+#include "libft.h"
 
 void *ft_calloc(size_t n, size_t size)
 {
 	void	*ptr;
 
 	if (n == 0 || size == 0)
-		return (NULL);
-	if (n > (0 - 1) / size)
+	{
+		ptr = malloc(1);
+		if (!ptr)
+			return(NULL);
+		return (ptr);
+	}
+	if (n > (size_t) - 1 / size)
 		return (NULL);
 	ptr = malloc(n * size);
-	ptr = ft_memset(ptr, 0, size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, n * size);
 	return (ptr);
 }

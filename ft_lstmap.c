@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/10 11:30:59 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/13 12:34:29 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst != NULL)
 	{
 		ptr = ft_lstnew(f(lst->content));
+		if (!ptr)
+		{
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
 		ft_lstadd_back(&head, ptr);
+		lst = lst->next;
 	}
 	return(head);
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/30 11:41:09 by munoguer          #+#    #+#              #
-#    Updated: 2026/11/11 20:18:45 by marvin           ###   ########.fr        #
+#    Updated: 2026/11/13 13:01:26 by munoguer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,20 +26,20 @@ INCS = libft.h
 AR = ar rcs
 CFLAGS = -Wall -Werror -Wextra
 
-all:$(NAME)
+all: $(NAME)
 
-$(NAME):$(OBJS)
+$(NAME): $(OBJS)
 	$(AR) $@ $(OBJS)
 	
-%.o:%.c $(INCS)
+%.o: %.c $(INCS)
 	@cc $(CFLAGS) -c $<
 
 clean:
 	@rm -fv $(OBJS)
 
-fclean:clean
+fclean: clean
 	@rm -fv $(NAME)
 
-re:fclean all
+re: fclean all
 
 .PHONY: clean fclean re

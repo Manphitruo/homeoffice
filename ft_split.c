@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/11 23:22:06 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/13 12:06:54 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	ft_chr_quant(char const *s, char const set)
 	return (i);
 }
 
-char	**ft_free_all(char **s, int i)
+static char	**ft_free_all(char **s, int i)
 {
 	while (i >= 0)
 	{
@@ -84,6 +84,6 @@ char	**ft_split(char const *s, char c)
 		ptr[i][j] = '\0';
 		i++;
 	}
-	ptr[i] = '\0';
+	ptr[i] = "\0";
 	return (ptr);
 }

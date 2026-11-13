@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/06 20:09:53 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/13 14:31:15 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (mem1[i] - mem2[i]);
 		i++;
 	}
-	return (mem1[i] - mem2[i]);
+	return (0);
 }
