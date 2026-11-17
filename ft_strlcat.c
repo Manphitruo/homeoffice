@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/13 13:18:49 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/15 20:56:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i + j] = '\0';
 	return (ft_strlen(src) + i);
 }
+
+/* #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int	main()
+{
+	char dst[20] = "Hello ";
+	printf("ft_strlcat ret: %zu, dst: %s\n",
+		ft_strlcat(dst, "!!!", sizeof(dst)), dst);
+} */

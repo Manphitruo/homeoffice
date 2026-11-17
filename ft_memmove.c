@@ -6,11 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/07 01:56:01 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/15 20:12:43 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -23,7 +23,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	if (src > dest)
 	{
-		
 		while (i < n)
 		{
 			mem_dest[i] = mem_src[i];
@@ -34,9 +33,22 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (0 < n)
 		{
-			mem_dest[n-1] = mem_src[n-1];
+			mem_dest[n - 1] = mem_src[n - 1];
 			n--;
 		}
 	}
 	return (dest);
 }
+
+/* #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int	main()
+{
+	char move_buf[20] = "123456789";
+	ft_memmove(move_buf + 2, move_buf, 5);
+	printf("ft_memmove: %s\n", move_buf);
+} */

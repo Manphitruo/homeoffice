@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/13 18:32:00 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/15 20:57:29 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-int	ft_isdigit(int	c);
+#include "libft.h"
 
 static int	ft_dec_n(int n)
 {
 	int		i;
 
 	i = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		n = -n;
@@ -48,6 +50,8 @@ char	*ft_itoa(int n)
 	char	*ptr;
 	int		size;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	size = ft_dec_n(n);
 	ptr = malloc(size + 1);
 	if (!ptr)
@@ -56,3 +60,18 @@ char	*ft_itoa(int n)
 	ptr[size] = '\0';
 	return (ptr);
 }
+
+/* #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include "libft.h"
+
+int	main()
+{
+	char *itoa_res = ft_itoa(-12345);
+	printf("ft_itoa(-12345): %s\n", itoa_res);
+	free(itoa_res);
+} */

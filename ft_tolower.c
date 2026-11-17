@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:19:39 by munoguer          #+#    #+#             */
-/*   Updated: 2026/10/30 13:55:33 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/15 18:15:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int	c)
+int	ft_tolower(int c)
 {
 	if ((c >= 'A' && c <= 'Z'))
 		return (c + ('a' - 'A'));

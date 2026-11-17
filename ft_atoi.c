@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/13 18:19:17 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/15 20:19:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ static int	ft_isspace(char c)
 int	ft_atoi(const char *ptr)
 {
 	long int	n;
-	int	i;
-	int	sign;
+	int			i;
+	int			sign;
 
 	i = 0;
 	n = 0;
@@ -37,7 +37,7 @@ int	ft_atoi(const char *ptr)
 		i++;
 		sign = -1;
 	}
-	while(ft_isdigit(ptr[i]))
+	while (ft_isdigit(ptr[i]))
 	{
 		n *= 10;
 		n += (ptr[i] - '0');
@@ -45,3 +45,17 @@ int	ft_atoi(const char *ptr)
 	}
 	return (n * sign);
 }
+
+/* #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include "libft.h"
+
+int	main()
+{
+	const char *num_str = "-2147483648";
+	printf("ft_atoi(\"%s\"): %d\n", num_str, ft_atoi(num_str));
+} */

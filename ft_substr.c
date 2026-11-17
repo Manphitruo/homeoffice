@@ -33,3 +33,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
+
+/* #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include "libft.h"
+
+int	main()
+{
+	char *sub = ft_substr("Hello World", 6, 5);
+	printf("ft_substr: %s\n", sub);
+	free(sub);
+} */

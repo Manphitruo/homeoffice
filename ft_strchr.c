@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/13 14:59:35 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/15 20:15:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,19 @@ char	*ft_strchr(char const *s, int c)
 		i++;
 	}
 	if ((char)c == s[i])
-		return((char *)&s[i]);
+		return ((char *)&s[i]);
 	return (NULL);
 }
+
+/* #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include "libft.h"
+
+int	main()
+{
+	printf("ft_strchr(\"42 School\", 'S'): %s\n", ft_strchr("42 School", 'S'));
+} */

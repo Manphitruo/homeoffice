@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/13 12:06:54 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/17 23:30:22 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
 static int	ft_sets_quant(char const *s1, char const set)
@@ -22,7 +23,8 @@ static int	ft_sets_quant(char const *s1, char const set)
 	c = 0;
 	while (s1[i])
 	{
-		if ((s1[i] != set && i != 0 && s1[i - 1] == set) || (s1[i] != set && i == 0))
+		if ((s1[i] != set && i != 0 && s1[i - 1] == set)
+			|| (s1[i] != set && i == 0))
 			c++;
 		i++;
 	}
@@ -51,39 +53,49 @@ static char	**ft_free_all(char **s, int i)
 		i--;
 	}
 	free(s);
-	return(NULL);
-}
-
-static int	ft_inner(char const **s, char **ptr, int i, int j)
-{
-	ptr[i][j++] = **s;
-	(*s)++;
-	return (j);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	int		i;
-	int		j;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	ptr = malloc((ft_sets_quant(s, c) + 1) * sizeof(char *));
 	if (!ptr)
 		return (NULL);
+	while (s == ft_strchr(s, c) && *s != '\0')
+		s++;
 	while (*s != '\0')
 	{
-		j = 0;
-		ptr[i] = malloc(ft_chr_quant(s, c) + 1);
+		ptr[i] = ft_substr(s, 0, ft_chr_quant(s, c));
 		if (!ptr[i])
 			return (ft_free_all(ptr, i));
-		while (s != ft_strchr(s, c) && *s != '\0')
-			j = ft_inner(&s, ptr, i, j);
-		if (*s != '\0')
+		s += ft_chr_quant(s, c);
+		while (s == ft_strchr(s, c) && *s != '\0')
 			s++;
-		ptr[i][j] = '\0';
 		i++;
 	}
-	ptr[i] = "\0";
+	ptr[i] = NULL;
 	return (ptr);
 }
+
+/* #include <stdio.h>
+
+int	main()
+{
+	printf("ft_split(\"read,write,execute\", ','):\n");
+	char **split = ft_split("read,write,execute", ',');
+	if (split)
+	{
+		for (int i = 0; split[i] != NULL; i++)
+		{
+				printf("  [%d]: %s\n", i, split[i]);
+		free(split[i]);
+		}
+		free(split);
+	}
+} */
