@@ -6,7 +6,7 @@
 #    By: munoguer <munoguer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/30 11:41:09 by munoguer          #+#    #+#              #
-#    Updated: 2026/11/13 13:01:26 by munoguer         ###   ########.fr        #
+#    Updated: 2026/11/18 11:48:58 by munoguer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ $(NAME): $(OBJS)
 	$(AR) $@ $(OBJS)
 	
 %.o: %.c $(INCS)
-	@cc $(CFLAGS) -c $<
+	@gcc $(CFLAGS) -c $<
 
 clean:
 	@rm -fv $(OBJS)
@@ -42,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re
+.PHONY: all clean fclean re

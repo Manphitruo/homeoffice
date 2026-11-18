@@ -48,7 +48,10 @@ This project is the essential library that will be used along the rest of the co
 Along with the Header file and the Makefile with clean fclean and re instructions.
 
 # Instructions
-This 
+This library is compiled using the objects and the ar command with the rcs flags, the objects are compiled using gcc and -Wall -Werror -Wextra flags as well as -c. All is done in the makefile and for later usage you need only to have both libft .h and .a in the file and compile with libft.a
 
 # Resources
 
+For general doubts about concepts I used geeksforgeeks.
+For logic problems I relied on my peers.
+and for debbuging, when I was really tired I used duck debbuger A.I. which doesen't tell me the problem but helps me notice it myself.
