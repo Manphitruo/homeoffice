@@ -21,9 +21,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (len < 1 || (size_t)start >= ft_strlen(s))
+	if (len == 0 || (size_t)start >= ft_strlen(s))
 		return (ft_strdup(""));
-	size = (ft_strlen(s) - (size_t)start);
+	if ((size_t)start < ((size_t) - 1) / len
+		&& (((size_t)start + (size_t)len) <= ft_strlen(s)))
+		size = len;
+	else
+		size = ft_strlen(s) - start;
 	sub = malloc(size + 1);
 	if (!sub)
 		return (NULL);
@@ -43,7 +47,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int	main()
 {
-	char *sub = ft_substr("Hello World", 6, 5);
+	char *sub = ft_substr("Hello asdfghjkWorld", 6, 100);
 	printf("ft_substr: %s\n", sub);
 	free(sub);
 } */
