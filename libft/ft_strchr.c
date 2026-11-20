@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/18 15:41:27 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/20 16:17:42 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ char	*ft_strchr(char const *s, int c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	if ((char)c == s[i])
-		return ((char *)&s[i]);
 	return (NULL);
 }
 
