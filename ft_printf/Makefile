@@ -6,7 +6,7 @@
 #    By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/20 12:39:15 by munoguer          #+#    #+#              #
-#    Updated: 2026/11/20 12:54:37 by munoguer         ###   ########.fr        #
+#    Updated: 2026/11/20 18:17:27 by munoguer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 SRCS = ft_printf.c
 OBJS = $(SRCS:.c=.o)
-INCS = ft_printf.h
+INCS = ft_printf.h libft/libft.h
 
 CFLAGS = -Wall -Werror -Wextra
 AR = ar rcs
