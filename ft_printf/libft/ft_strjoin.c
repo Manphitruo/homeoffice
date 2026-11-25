@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/18 15:41:50 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 13:03:04 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

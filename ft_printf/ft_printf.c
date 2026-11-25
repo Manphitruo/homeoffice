@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 16:36:16 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/20 19:29:12 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 14:42:25 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ int	main()
 	char s[] = "testando";
 	char c = 'C';
 	int	*ptr = &i;
-
 
 	ft_printf("teste %c %s %p %d %i %u %x %X %%", c, s, ptr, i, i, un, i, i);
 	printf("\nteste %c %s %p %d %i %u %x %X %%\n", c, s, ptr, i, i, un, i, i);

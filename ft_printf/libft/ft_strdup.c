@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/18 15:41:34 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 13:00:37 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *s)
 {
 	char	*dest;
-	int		i;
+	size_t	i;
 	size_t	len;
 
 	i = 0;

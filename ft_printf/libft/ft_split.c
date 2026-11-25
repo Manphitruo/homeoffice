@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/18 15:41:21 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 13:29:22 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,21 +43,25 @@ static int	ft_chr_quant(char const *s, char const set)
 	return (i);
 }
 
-static char	**ft_free_all(char **s, int i)
+static char	**ft_free_all(char **s, size_t i)
 {
-	while (i >= 0)
+	if (i != 0)
+		i--;
+	else
+		return (free(s), NULL);
+	while (i > 0)
 	{
 		free(s[i]);
 		i--;
 	}
-	free(s);
-	return (NULL);
+	free(s[i]);
+	return (free(s), NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if (!s)
