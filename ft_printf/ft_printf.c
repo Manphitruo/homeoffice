@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 16:36:16 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/25 14:42:25 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 16:00:53 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_selec_perc(const char *format, size_t set, va_list *args)
 	else if (format[set] == 's')
 		ft_putstr_fd(va_arg(*args, char *), 1);
 	else if (format[set] == 'p')
-		ft_putptr(va_arg(*args, void *));
+		ft_itoa_base((uintptr_t)va_arg(*args, void *), "0123456789abcdef");
 	else if (format[set] == 'd' || format[set] == 'i')
 		ft_putnbr_fd(va_arg(*args, int), 1);
 	else if (format[set] == 'u')

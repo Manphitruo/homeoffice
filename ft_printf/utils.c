@@ -6,21 +6,12 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 16:26:07 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/25 14:57:53 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 15:43:50 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_printf.h"
-
-void	ft_putptr(void *ptr)
-{
-	char	*address;
-	size_t	i;
-
-	
-	write(1, address, 14);
-}
 
 void	ft_putunsig(unsigned int num)
 {
