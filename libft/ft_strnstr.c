@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/18 15:42:55 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 13:20:54 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (i < len && big[i])
 	{
 		j = 0;
-		while (big[i + j] == little[j] && little[j] && (i + j) < len)
+		while ((i + j) < len && little[j] && big[i + j] == little[j])
 		{
 			j++;
 		}

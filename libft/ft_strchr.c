@@ -6,7 +6,7 @@
 /*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:28:56 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/20 16:17:42 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 13:03:20 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(char const *s, int c)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if ((char)c == 0)

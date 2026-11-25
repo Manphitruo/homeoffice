@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munoguer <munoguer@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: munoguer <munoguer@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 14:54:47 by munoguer          #+#    #+#             */
-/*   Updated: 2026/11/18 14:54:52 by munoguer         ###   ########.fr       */
+/*   Updated: 2026/11/25 13:07:29 by munoguer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_isspace(char c)
 int	ft_atoi(const char *ptr)
 {
 	long int	n;
-	int			i;
+	size_t		i;
 	int			sign;
 
 	i = 0;
